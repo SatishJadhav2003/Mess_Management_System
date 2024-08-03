@@ -2,17 +2,29 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  standalone:true,
-  imports:[CommonModule],
+  standalone: true,
+  imports: [CommonModule],
   selector: 'app-banner',
   templateUrl: './banner.component.html',
-  styleUrls: ['./banner.component.css']
+  styleUrls: ['./banner.component.css'],
 })
 export class BannerComponent implements OnInit {
   banners = [
-    { image: 'images/plat1.png', title: "Missing MOM's meal ?", message: 'Give us chance' },
-    { image: 'https://via.placeholder.com/600x400', title: 'Banner 2', message: 'This is the second banner message.' },
-    { image: 'https://via.placeholder.com/600x400', title: 'Banner 3', message: 'This is the third banner message.' }
+    {
+      image: 'images/plat2.jpg',
+      title: 'Are you hungry ?',
+      message: "Let's try delicious day special",
+    },
+    {
+      image: 'images/plat1.png',
+      title: "Missing MOM's meal ?",
+      message: 'Give us chance',
+    },
+    {
+      image: 'images/tiffin2.png',
+      title: 'Need a Tiffin ?',
+      message: 'For college, Office or whatever,Will provide.',
+    },
   ];
 
   translateX = 0;
