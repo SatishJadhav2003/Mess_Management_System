@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, WritableSignal, signal } from '@angular/core';
 import { CardComponent } from '../card/card.component';
 import { BannerComponent } from "../banner/banner.component";
 export interface Services {
@@ -14,7 +14,7 @@ export interface Services {
   styleUrl: './home.component.css',
 })
 export class HomeComponent {
-  services: Services[] = [
+  services:WritableSignal<Services[]> =signal([
     {
       ID: 3,
       Title: 'Day Special',
@@ -30,6 +30,5 @@ export class HomeComponent {
       Title: 'Parcel Point',
       Image: 'images/parcel.webp',
     },
-    
-  ];
+  ]);
 }

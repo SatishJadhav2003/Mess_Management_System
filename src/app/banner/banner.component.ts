@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, WritableSignal, signal } from '@angular/core';
 
 @Component({
   standalone: true,
@@ -9,7 +9,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./banner.component.css'],
 })
 export class BannerComponent implements OnInit {
-  banners = [
+
+  banners:WritableSignal<{ image: string; title: string; message: string; }[]> = signal([
     {
       image: 'images/plat2.jpg',
       title: 'Are you hungry ?',
@@ -25,10 +26,10 @@ export class BannerComponent implements OnInit {
       title: 'Need a Tiffin ?',
       message: 'For college, Office or whatever,Will provide.',
     },
-  ];
+  ]);
 
-  translateX = 0;
-  currentIndex = 0;
+  translateX = signal(0);
+  currentIndex = signal(0);
 
   ngOnInit() {
     this.startAutoScroll();
@@ -41,7 +42,7 @@ export class BannerComponent implements OnInit {
   }
 
   nextBanner() {
-    this.currentIndex = (this.currentIndex + 1) % this.banners.length;
-    this.translateX = -this.currentIndex * 100;
+    this.currentIndex.set((this.currentIndex() + 1) % this.banners().length)
+    this.translateX.set(-this.currentIndex() * 100);
   }
 }

@@ -1,0 +1,16 @@
+<div class="flex items-center justify-center bg-gray-200">
+    <div class="bg-white p-8 rounded-lg shadow-lg max-w-md w-full">
+      <h2 class="text-2xl font-bold mb-6 text-gray-800 text-center">Login</h2>
+     
+        <div class="mb-4">
+          <label for="username" class="block text-gray-700 font-semibold mb-2">Username</label>
+          <input type="text" id="username" name="username" ngModel required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        </div>
+        <div class="mb-6">
+          <label for="password" class="block text-gray-700 font-semibold mb-2">Password</label>
+          <input type="password" id="password" name="password" ngModel required class="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent">
+        </div>
+        <button (click)="onSubmit()" type="submit" class="w-full bg-purple-600 text-white py-2 rounded-lg font-semibold hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-offset-2">Login</button>
+    </div>
+  </div>
+  
