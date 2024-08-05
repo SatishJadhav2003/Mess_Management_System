@@ -1,9 +1,10 @@
 import { Injectable, signal } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class UtilService {
-userName = signal('satish');
-  constructor() { }
+  isLoggedIn = signal(true);
+  userName = signal('satish');
+  constructor() {}
 }

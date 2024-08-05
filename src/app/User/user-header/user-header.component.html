@@ -1,0 +1,45 @@
+<div
+  class="py-8 h-54 px-8 mx-auto bg-white shadow-lg space-y-2 sm:py-4 sm:flex sm:items-center sm:space-y-0 sm:space-x-6"
+>
+  <img
+    class="block mx-auto h-24 width-12 object-contain rounded-full sm:mx-0 sm:shrink-0 "
+    src="Icons/avatar2.png"
+  />
+  <div class="text-center space-y-2 w-full bg-white">
+    <div class="space-y-0.5 bg-white">
+      <p class="bg-white text-4xl font-semibold text-purple-800">Satish Jadhav</p>
+      <p class="bg-inherit text-slate-500 font-medium pt-2">
+       {{"+91 8390613529 | satishjadhav8421@gmail.com"}}
+      </p>
+    </div>
+
+  </div>
+  <div class="text-center sm:ml-6 cursor-pointer"  >
+    <div class="relative inline-block">
+        <svg
+          class="w-8 h-8 text-yellow-500"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M15 17h5l-1.405-1.405C18.598 14.799 18 13.423 18 12V8a6 6 0 10-12 0v4c0 1.423-.598 2.799-1.595 3.595L3 17h5m0 0v1a3 3 0 006 0v-1m-6 0h6"
+          />
+        </svg>
+        <span
+          *ngIf="count() > 0"
+          class="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full"
+        >
+          {{ count() }}
+        </span>
+      </div>
+      
+  </div>
+</div>
+
+
+

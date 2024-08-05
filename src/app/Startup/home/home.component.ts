@@ -1,6 +1,7 @@
 import { Component, WritableSignal, signal } from '@angular/core';
 import { CardComponent } from '../card/card.component';
-import { BannerComponent } from "../banner/banner.component";
+import { BannerComponent } from '../banner/banner.component';
+import { HeaderComponent } from "../header/header.component";
 export interface Services {
   ID: number;
   Title: string;
@@ -9,7 +10,7 @@ export interface Services {
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardComponent, BannerComponent],
+  imports: [CardComponent, BannerComponent, HeaderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css',
 })

@@ -1,16 +1,19 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit, WritableSignal, signal } from '@angular/core';
-
+export interface Banner {
+  image: string;
+  title: string;
+  message: string;
+}
 @Component({
   standalone: true,
   imports: [CommonModule],
-  selector: 'app-banner',
+  selector: 'app-banner',  
   templateUrl: './banner.component.html',
   styleUrls: ['./banner.component.css'],
 })
 export class BannerComponent implements OnInit {
-
-  banners:WritableSignal<{ image: string; title: string; message: string; }[]> = signal([
+  banners: WritableSignal<Banner[]> = signal([
     {
       image: 'images/plat2.jpg',
       title: 'Are you hungry ?',
@@ -42,7 +45,7 @@ export class BannerComponent implements OnInit {
   }
 
   nextBanner() {
-    this.currentIndex.set((this.currentIndex() + 1) % this.banners().length)
+    this.currentIndex.set((this.currentIndex() + 1) % this.banners().length);
     this.translateX.set(-this.currentIndex() * 100);
   }
 }
