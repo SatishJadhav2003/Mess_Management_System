@@ -5,7 +5,8 @@ import { UserHeaderComponent } from './user-header/user-header.component';
 import { RouterModule, Routes } from '@angular/router';
 import {MatBadgeModule} from '@angular/material/badge';
 import { UserSidemenuComponent } from "./user-sidemenu/user-sidemenu.component";
-import { NgxEchartsModule } from 'ngx-echarts';
+import { NgApexchartsModule } from 'ng-apexcharts';
+
 const route:Routes = [
   {
     path:'',
@@ -19,9 +20,7 @@ const route:Routes = [
     CommonModule,
     RouterModule.forChild(route),
     MatBadgeModule,
-    NgxEchartsModule.forRoot({
-      echarts: () => import('echarts'),
-    }),
+    NgApexchartsModule
 ]
 })
 export class UserModule { }
